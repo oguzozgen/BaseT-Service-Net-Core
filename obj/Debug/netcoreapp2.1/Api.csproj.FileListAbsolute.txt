@@ -1,0 +1,14 @@
+Z:\Repo\Ouz\asd\Api\bin\Debug\netcoreapp2.1\Api.deps.json
+Z:\Repo\Ouz\asd\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.json
+Z:\Repo\Ouz\asd\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.dev.json
+Z:\Repo\Ouz\asd\Api\bin\Debug\netcoreapp2.1\Api.dll
+Z:\Repo\Ouz\asd\Api\bin\Debug\netcoreapp2.1\Api.pdb
+Z:\Repo\Ouz\asd\Api\obj\Debug\netcoreapp2.1\Api.csprojAssemblyReference.cache
+Z:\Repo\Ouz\asd\Api\obj\Debug\netcoreapp2.1\Api.csproj.CoreCompileInputs.cache
+Z:\Repo\Ouz\asd\Api\obj\Debug\netcoreapp2.1\Api.RazorAssemblyInfo.cache
+Z:\Repo\Ouz\asd\Api\obj\Debug\netcoreapp2.1\Api.RazorAssemblyInfo.cs
+Z:\Repo\Ouz\asd\Api\obj\Debug\netcoreapp2.1\Api.AssemblyInfoInputs.cache
+Z:\Repo\Ouz\asd\Api\obj\Debug\netcoreapp2.1\Api.AssemblyInfo.cs
+Z:\Repo\Ouz\asd\Api\obj\Debug\netcoreapp2.1\Api.RazorTargetAssemblyInfo.cache
+Z:\Repo\Ouz\asd\Api\obj\Debug\netcoreapp2.1\Api.dll
+Z:\Repo\Ouz\asd\Api\obj\Debug\netcoreapp2.1\Api.pdb
