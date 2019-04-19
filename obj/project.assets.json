@@ -11916,11 +11916,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\Repo\\Ouz\\asd\\Api\\Api.csproj",
+      "projectUniqueName": "Z:\\Repo\\Github\\BaseT-Service-Net-Core\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "Z:\\Repo\\Ouz\\asd\\Api\\Api.csproj",
+      "projectPath": "Z:\\Repo\\Github\\BaseT-Service-Net-Core\\Api.csproj",
       "packagesPath": "C:\\Users\\oguz\\.nuget\\packages\\",
-      "outputPath": "Z:\\Repo\\Ouz\\asd\\Api\\obj\\",
+      "outputPath": "Z:\\Repo\\Github\\BaseT-Service-Net-Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
