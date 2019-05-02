@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BaseT_Service_Net_Core.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -10,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;  
 
 namespace Api
 {
@@ -27,10 +29,14 @@ namespace Api
         {
             services.AddMvcCore(config =>
             {
+
                 var policy = new AuthorizationPolicyBuilder()
                      .RequireAuthenticatedUser()
                      .Build();
                 config.Filters.Add(new AuthorizeFilter(policy)); //global authorize filter
+                 // require scope1 or scope2
+                var policyc = ScopePolicy.Create("merhabain");
+                config.Filters.Add(new AuthorizeFilter(policyc));
             })
                 .AddAuthorization()
                 .AddJsonFormatters();
@@ -41,7 +47,8 @@ namespace Api
                     options.Authority = "http://localhost:5000";
                     options.RequireHttpsMetadata = false;
 
-                    options.ApiName = "profile-db-service-api-1";
+                    options.ApiName = "verywon-dbservice";
+                    
                 });
 
             services.AddCors(options =>
@@ -54,6 +61,15 @@ namespace Api
                         .AllowAnyMethod();
                 });
             });
+
+            services.AddDbContext<ServiceTContext>(
+                options =>
+                     options.UseNpgsql(Configuration.GetConnectionString("PostgreConnection"))
+                 );
+
+                // services.AddScoped<IGenericRepostitory, ProductRepository>();
+            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

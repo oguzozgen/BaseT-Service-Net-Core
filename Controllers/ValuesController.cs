@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
-{
+{  
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+      
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -40,5 +42,15 @@ namespace Api.Controllers
         public void Delete(int id)
         {
         }
+
+         [Authorize("merhabain")]
+        [HttpPost]
+        public Task<string> Merhabain([FromBody]string value)
+        {    
+            string x="as";
+             return Task.FromResult(x);
+        }
+
+
     }
 }
