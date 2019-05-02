@@ -34,11 +34,20 @@ namespace Api
                      .RequireAuthenticatedUser()
                      .Build();
                 config.Filters.Add(new AuthorizeFilter(policy)); //global authorize filter
+               
+               
                  // require scope1 or scope2
                 var policyc = ScopePolicy.Create("merhabain");
                 config.Filters.Add(new AuthorizeFilter(policyc));
             })
-                .AddAuthorization()
+                .AddAuthorization(options=>
+                     //TODO Blocks values controlle one api but did not let to use
+                      options.AddPolicy("jsclient", config =>
+                    {
+                        config.AddAuthenticationSchemes("bearer");
+                        config.RequireClaim("client_id", "spa");
+                    })
+                )
                 .AddJsonFormatters();
 
             services.AddAuthentication("Bearer")
@@ -48,6 +57,9 @@ namespace Api
                     options.RequireHttpsMetadata = false;
 
                     options.ApiName = "verywon-dbservice";
+                    
+                    options.EnableCaching = true;
+                    options.CacheDuration = TimeSpan.FromMinutes(10);
                     
                 });
 

@@ -43,11 +43,11 @@ namespace Api.Controllers
         {
         }
 
-         [Authorize("merhabain")]
+        [Authorize("jsclient")]
         [HttpPost]
         public Task<string> Merhabain([FromBody]string value)
         {    
-            string x="as";
+            string x="JsClient ile Eristin";
              return Task.FromResult(x);
         }
 
